@@ -32,6 +32,7 @@ public class Actor
     }
 
     private String gender;
+
     public Actor(){}
 
     public Actor(String name, int age) {
@@ -55,3 +56,6 @@ public class Actor
         this.age = age;
     }
 }
+
+
+

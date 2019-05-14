@@ -1,6 +1,5 @@
 package com.stackroute.spring.domain;
-
-
+import com.stackroute.spring.domain.Actor;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class Movie
@@ -14,7 +13,7 @@ public class Movie
     public Movie(String movieName, String director, Actor actor1) {
         this.movieName = movieName;
         this.director = director;
-        this.actor = actor1;
+        this.actor= actor1;
     }
 
     @Override
@@ -50,3 +49,5 @@ public class Movie
         this.actor = actor;
     }
 }
+
+
