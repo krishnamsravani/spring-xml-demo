@@ -1,0 +1,38 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id = "actor1" class="com.stackroute.spring.domain.Actor" scope="prototype">
+        <property name="name" value="Surya"/>
+        <property name="gender" value="Male"/>
+        <property name="age" value="32"/>
+
+    </bean>
+
+    <bean id = "movie" class="com.stackroute.spring.domain.Movie" scope="prototype">
+        <property name="actor" ref="actor1"></property>
+    </bean>
+
+    <bean id = "actor2" class="com.stackroute.spring.domain.Actor" scope="prototype">
+        <property name="name" value="ramcharan"/>
+        <property name="gender" value="Male"/>
+        <property name="age" value="35"/>
+    </bean>
+
+    <bean id = "movie1" class="com.stackroute.spring.domain.Movie" scope="prototype">
+        <property name="actor" ref="actor2"></property>
+    </bean>
+
+    <bean id = "actor3" class="com.stackroute.spring.domain.Actor" scope="prototype">
+        <property name="name" value="prabhas"/>
+        <property name="gender" value="Male"/>
+        <property name="age" value="38"/>
+    </bean>
+
+    <bean id = "movie2" class="com.stackroute.spring.domain.Movie" scope="prototype">
+        <property name="actor" ref="actor3"></property>
+    </bean>
+
+</beans>
