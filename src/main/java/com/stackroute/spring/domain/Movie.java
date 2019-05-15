@@ -1,8 +1,11 @@
 package com.stackroute.spring.domain;
 import com.stackroute.spring.domain.Actor;
+import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 
-public class Movie
+public class Movie implements ApplicationContextAware
 {
     private String movieName;
     private String director;
@@ -48,6 +51,11 @@ public class Movie
     public void setActor(Actor actor) {
         this.actor = actor;
     }
+
+   // @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        System.out.println(applicationContext);
+        Actor actor=(Actor)applicationContext.getBean("actor");
+        System.out.println(actor);
+    }
 }
-
-

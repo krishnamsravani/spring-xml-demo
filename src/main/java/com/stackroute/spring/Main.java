@@ -16,9 +16,9 @@ public class Main {
         Movie movie=(Movie)applicationContext3.getBean("movie4");
 
         System.out.println(movie.toString());
-
-       // Movie movie1=(Movie)applicationContext3.getBean("movie5");
-       // System.out.println(movie1.toString());
+//
+//        Movie movie1=(Movie)applicationContext3.getBean("movie5");
+//        System.out.println(movie1.toString());
 
 
     }
